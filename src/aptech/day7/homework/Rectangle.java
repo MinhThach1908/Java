@@ -9,11 +9,21 @@ public class Rectangle implements ShapeUtility{
 
     @Override
     public double calculateArea() {
-        return length * width;
+        if (length <= width) {
+            System.out.println("The length cannot smaller than the width");
+        } else {
+            return length * width;
+        }
+        return 0;
     }
 
     @Override
     public double calculatePerimeter() {
-        return (length + width) * 2;
+        if (length <= width) {
+            System.out.println("The length cannot smaller than the width");
+        } else {
+            return (length + width) * 2;
+        }
+        return 0;
     }
 }

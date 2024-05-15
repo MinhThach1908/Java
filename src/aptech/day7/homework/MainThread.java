@@ -25,7 +25,7 @@ public class MainThread {
                     double square_area = square.calculateArea();
                     double square_perimeter = square.calculatePerimeter();
                     System.out.printf("The Area of the Square is: %.2f\n", square_area);
-                    System.out.printf("The Perimeter of the Square is: %.2f", square_perimeter);
+                    System.out.printf("The Perimeter of the Square is: %.2f\n", square_perimeter);
                     break;
                 case 2:
                     // Rectangle
@@ -34,7 +34,7 @@ public class MainThread {
                     double rectangle_area = rectangle.calculateArea();
                     double rectangle_perimeter = rectangle.calculatePerimeter();
                     System.out.printf("The Area of the Rectangle is: %.2f\n", rectangle_area);
-                    System.out.printf("The Perimeter of the Rectangle is: %.2f", rectangle_perimeter);
+                    System.out.printf("The Perimeter of the Rectangle is: %.2f\n", rectangle_perimeter);
                     break;
                 case 3:
                     // Triangle
@@ -43,7 +43,7 @@ public class MainThread {
                     double triangle_area = triangle.calculateArea();
                     double triangle_perimeter = triangle.calculatePerimeter();
                     System.out.printf("The Area of the Triangle is: %.2f\n", triangle_area);
-                    System.out.printf("The Perimeter of the Triangle is: %.2f", triangle_perimeter);
+                    System.out.printf("The Perimeter of the Triangle is: %.2f\n", triangle_perimeter);
                     break;
                 case 4:
                     // Circle
@@ -52,7 +52,7 @@ public class MainThread {
                     double circle_area = circle.calculateArea();
                     double circle_perimeter = circle.calculatePerimeter();
                     System.out.printf("The Area of the Circle is: %.2f\n", circle_area);
-                    System.out.printf("The Perimeter of the Circle is: %.2f", circle_perimeter);
+                    System.out.printf("The Perimeter of the Circle is: %.2f\n", circle_perimeter);
                     break;
                 case 5:
                     // Exit
