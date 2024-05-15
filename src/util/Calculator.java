@@ -1,4 +1,4 @@
-package ulti;
+package util;
 
 public class Calculator {
     public static float tinhChuViTamGiac(float a, float b, float c) {
