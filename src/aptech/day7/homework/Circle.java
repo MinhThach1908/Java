@@ -3,16 +3,22 @@ package aptech.day7.homework;
 import java.util.Scanner;
 
 public class Circle implements ShapeUtility{
-    Scanner scanner = new Scanner(System.in);
-    double r = scanner.nextDouble();
+    private double radius;
+
+    @Override
+    public void inputData() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the radius of the circle: ");
+        this.radius = scanner.nextDouble();
+    }
 
     @Override
     public double calculateArea() {
-        return 2 * 3.14 * r;
+        return radius * radius * Math.PI;
     }
 
     @Override
     public double calculatePerimeter() {
-        return r * r * 3.14;
+        return 2 * Math.PI * radius;
     }
 }

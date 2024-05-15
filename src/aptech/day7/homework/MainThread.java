@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class MainThread {
     public static void main(String[] args) {
+        createMenu();
+    }
+
+    private static void createMenu() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             // Choosing Shape to calculate
@@ -17,42 +21,24 @@ public class MainThread {
             System.out.println("===============================");
             System.out.println("Please choose an option from 1 to 5");
             int choice = scanner.nextInt();
+            scanner.nextLine();
+            ShapeUtility shapeUtility = null;
             switch (choice) {
                 case 1:
                     // Square
-                    System.out.println("Please enter a side of the square: ");
-                    ShapeUtility square = new Square();
-                    double square_area = square.calculateArea();
-                    double square_perimeter = square.calculatePerimeter();
-                    System.out.printf("The Area of the Square is: %.2f\n", square_area);
-                    System.out.printf("The Perimeter of the Square is: %.2f\n", square_perimeter);
+                    shapeUtility = new Square();
                     break;
                 case 2:
                     // Rectangle
-                    System.out.println("Please enter the length and the width of the rectangle: ");
-                    ShapeUtility rectangle = new Rectangle();
-                    double rectangle_area = rectangle.calculateArea();
-                    double rectangle_perimeter = rectangle.calculatePerimeter();
-                    System.out.printf("The Area of the Rectangle is: %.2f\n", rectangle_area);
-                    System.out.printf("The Perimeter of the Rectangle is: %.2f\n", rectangle_perimeter);
+                    shapeUtility = new Rectangle();
                     break;
                 case 3:
                     // Triangle
-                    System.out.println("Please enter 3 sides of the triangle: ");
-                    ShapeUtility triangle = new Triangle();
-                    double triangle_area = triangle.calculateArea();
-                    double triangle_perimeter = triangle.calculatePerimeter();
-                    System.out.printf("The Area of the Triangle is: %.2f\n", triangle_area);
-                    System.out.printf("The Perimeter of the Triangle is: %.2f\n", triangle_perimeter);
+                    shapeUtility = new Triangle();
                     break;
                 case 4:
                     // Circle
-                    System.out.println("Please enter the radius of the circle: ");
-                    ShapeUtility circle = new Circle();
-                    double circle_area = circle.calculateArea();
-                    double circle_perimeter = circle.calculatePerimeter();
-                    System.out.printf("The Area of the Circle is: %.2f\n", circle_area);
-                    System.out.printf("The Perimeter of the Circle is: %.2f\n", circle_perimeter);
+                    shapeUtility = new Circle();
                     break;
                 case 5:
                     // Exit
@@ -63,9 +49,17 @@ public class MainThread {
                     System.out.println("Please choose from 1 to 5");
                     break;
             }
-            if (choice == 5){
-                // Ending Program
+            if (choice == 5) {
                 break;
+            }
+            if(shapeUtility != null) {
+                shapeUtility.inputData();
+                double Area = shapeUtility.calculateArea();
+                double Perimeter = shapeUtility.calculatePerimeter();
+                System.out.printf("The Area of the Square is: %.2f\n", Area);
+                System.out.printf("The Perimeter of the Square is: %.2f\n", Perimeter);
+                System.out.println("Press Enter to continue");
+                scanner.nextLine();
             }
         }
     }

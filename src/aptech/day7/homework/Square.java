@@ -3,16 +3,22 @@ package aptech.day7.homework;
 import java.util.Scanner;
 
 public class Square implements ShapeUtility{
-    Scanner scanner = new Scanner(System.in);
-    double a = scanner.nextDouble();
+    private double side;
+
+    @Override
+    public void inputData() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the side of the square: ");
+        this.side = scanner.nextDouble();
+    }
 
     @Override
     public double calculateArea() {
-        return a * a;
+        return side * side;
     }
 
     @Override
     public double calculatePerimeter() {
-        return a * 4;
+        return side * 4;
     }
 }
