@@ -1,4 +1,4 @@
-package aptech.day7.example4;
+package aptech.day7.homework;
 
 import java.util.Scanner;
 
